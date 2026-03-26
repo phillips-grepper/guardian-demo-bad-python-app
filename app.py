@@ -13,6 +13,18 @@ from db_helper import db_helper
 from db_models import db_models
 from middlewares import require_api_key
 
+import yaml
+
+yaml_string = """
+name: Alice
+age: 30
+skills:
+  - Python
+  - YAML
+"""
+
+data = yaml.safe_load(yaml_string)
+print(data)
 
 app = Flask(__name__)
 
