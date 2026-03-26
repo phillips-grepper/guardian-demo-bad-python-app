@@ -22,6 +22,9 @@ def sql_injection_login_api(request, app):
 
     db_result = app.db_helper.execute_read(sql)
 
+    sql2 = f"SELECT * FROM users WHERE username='{username}' AND password='{password_hash}'"
+    db_result2 = app.db_helper.execute_read(sql2)
+    
     user = list(
         map(
             lambda u: {
@@ -30,6 +33,14 @@ def sql_injection_login_api(request, app):
                 'password': u[2]
             }, 
             db_result
+        ),
+        map2(
+            lambda u: {
+                'id': u[0],
+                'username': u[1],
+                'password': u[2]
+            }, 
+            db_result2
         )
     )[0] if len(db_result) > 0 else None
 
