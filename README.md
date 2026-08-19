@@ -16,6 +16,8 @@
 ```
  /plugin install semgrep@claude-plugins-official
 ```
+In the event that claude fails to install the plugin using this command you can always type /plugins + enter to navigate manually through the marketplace and searching for semgrep.  
+
 #### Reload Plugins in Claude
 ```
 /reload-plugins
