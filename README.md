@@ -2,13 +2,16 @@
 
 ### Requisites
 
-* Claude Code (CLI)
-* Semgrep Guardian Plugin
-* Semgrep Auth TOken
+* Claude Code (CLI) - Installed and authenticated
+* Semgrep Account - (Free account for individual users https://semgrep.dev/)
 * Python 3.7+
 
 ### Lab
 
+#### Add the Marketplace (if not previously added)
+```
+ /plugin marketplace add claude-plugins-official
+```
 #### Installing Plugins (in Claude Code)
 ```
  /plugin install semgrep@claude-plugins-official
