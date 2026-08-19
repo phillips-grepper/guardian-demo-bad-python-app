@@ -1,54 +1,45 @@
-## Setup
+## Semgrep Guardian Demo / Lab - Bad Python App
 
 ### Requisites
 
-* ImageMagick: https://imagemagick.org/index.php
+* Claude Code (CLI)
+* Semgrep Guardian Plugin
+* Semgrep Auth TOken
 * Python 3.7+
-* Docker (if want to run in a container)
+
+### Lab
+
+#### Installing Plugins (in Claude Code)
+```
+ /plugin install semgrep@claude-plugins-official
+```
+#### Reload Plugins in Claude
+```
+/reload-plugins
+```
+#### Authentication
+Each developer completes a one-time browser login when they first use the plugin. Once authentication is completed, an OAuth session is stored in ./semgrep/guardian.yml. Semgrep refreshes access tokens automatically, so developers rarely need to sign in again.
 
 
-### Running
+#### Clone this repo
+You're ready to begin using Semgrep Guardian in claude but lets get started by practicing with this demo app.
 
-#### Run in Docker
-
-```sh
-# building
-docker build -t vuln-flask-web-app .
-
-# running
-docker run -it -p 5000:5000 --rm --name vuln-flask-web-app vuln-flask-web-app
+```
+git clone https://github.com/phillips-grepper/guardian-demo-bad-python-app/; cd guardian-demo-bad-python-app
 ```
 
-
-#### Run Local
+Now lets launch claude
 
 ```
-python3 -m venv venv
-source venv/bin/activate
-sh setup.sh
-sh run.sh
+claude
 ```
 
-
-### Options
-#### Restricting Access (optional)
-
-By default, the api key is set to `None` and any request will be allowed.
-
-If you want to restrict the access to the app, just set the environment variable named `VULN_FLASK_APP_API_KEY` with your secret:
-
-```sh
-export VULN_FLASK_APP_API_KEY=myapisecret
+Start your Session
+```
+SessionStart
 ```
 
-Now, every request should include a cookie named `api_key` with the value of the `VULN_FLASK_APP_API_KEY` environment variable.
+Paste Prompt from DEMO_PROMPT.md
+```
 
-```http
-GET / HTTP/1.1
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Host: localhost:5000
-...
-
-Cookie: api_key=myapisecret
-
-...
+```
