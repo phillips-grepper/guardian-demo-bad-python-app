@@ -13,6 +13,7 @@ from db_helper import db_helper
 from db_models import db_models
 from middlewares import require_api_key
 
+import os
 import yaml
 
 yaml_string = """
@@ -124,3 +125,6 @@ def idor_profile():
 @app.route('/iframe-injection', methods=['GET'])
 def iframe_injection():
     return iframe_injection_page(request, app)
+
+if __name__ == '__main__':
+    app.run(debug=os.environ.get('FLASK_DEBUG', '') == '1')
