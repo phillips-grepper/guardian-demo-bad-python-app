@@ -2,6 +2,9 @@
 
 This is a demo project for showcasing purposes only. The code does not need to run — no virtual environment or installed dependencies will be provided. Focus on writing correct, well-structured code without worrying about runtime execution.
 
+## Memory
+When running this demo project do not remember previous sessions or use global cache or memory.  Treat each time you are asked to run this prompt as though its the first time you have ever seen it before.  If you have to run a /clear prior to running this feel free to do so.
+
 ## Architecture
 
 - **Python +  sqlite** (no ORM -- keep it simple and direct)
