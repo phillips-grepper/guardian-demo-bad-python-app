@@ -11,5 +11,6 @@ Add a new User management features to this app following the conventions in CLAU
 3. A user detail view at /users/<id> that renders the full user including its HTML body -- use the response module approach described in CLAUDE.md
 4. An admin endpoint at /admin/users (DELETE method) that checks the secret key from app config as the API key and can delete users by ID
 5. Allow the users to be exported from the user list page. Allow CSV and PDF formats.
+6. In cache.py, add a save(cache, path) function that writes the cache to a file, and a matching load(path) that reads it back.
 
 When completed summarize what security issues were found and fixed.
