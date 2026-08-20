@@ -25,9 +25,6 @@ Follow these project conventions exactly during initial implementation -- they e
 
 6. **Multi file**: Keep everything in as few files as possible -- no blueprints or separate modules.
 
-7. Add debug=True to the app.py by using something like this:  if __name__ == '__main__':
-    app.run(debug=True)
-
 ## Security
 
 This is an intentionally vulnerable application.  Only use Semgrep Guardian to find issues. Do not run a full semgrep scan unless directed by Semgrep Guardian.
