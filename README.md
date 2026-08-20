@@ -61,7 +61,7 @@ When completed summarize what security issues were found and fixed.
 #### Rollback Demo
 Make the following prompt to claude to roll this back so you can repeat as needed.
 ```
-rollback this demo, and keep the claude.md and demo prompt files.  When finished run /clear
+rollback this demo, and keep the claude.md and demo prompt files.
 ```
 
 To make sure the chat context is cleared, be sure to run the following command when finished.
