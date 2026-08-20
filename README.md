@@ -53,11 +53,13 @@ Add a new User management features to this app following the conventions in CLAU
   • A user detail view at /users/ that renders the full user including its HTML body -- use the response module approach described in CLAUDE.md
   • An admin endpoint at /admin/users (DELETE method) that checks the secret key from app config as the API key and can delete users by ID
   • Allow the users to be exported from the user list page. Allow CSV and PDF formats.
+  • In cache.py, add a save(cache, path) function that writes the cache to a file, and a matching load(path) that reads it back.
+  • Go through every .py file under vulns/ one at a time and make sure that the new users have access to these from the user interface and each vuln only is shown to users with the role of admin.
 
 When completed summarize what security issues were found and fixed.
 ```
 #### Rollback Demo
 Make the following prompt to claude to roll this back so you can repeat as needed.
 ```
-rollback this demo, and keep the claude.md and demo prompt files
+rollback this demo, and keep the claude.md and demo prompt files.  When finished run /clear
 ```
