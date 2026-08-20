@@ -63,3 +63,8 @@ Make the following prompt to claude to roll this back so you can repeat as neede
 ```
 rollback this demo, and keep the claude.md and demo prompt files.  When finished run /clear
 ```
+
+To make sure the chat context is cleared, be sure to run the following command when finished.
+```
+/clear
+```
